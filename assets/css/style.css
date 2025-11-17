@@ -1,0 +1,185 @@
+/* Custom Fonts inspired by ornate Indian styles - Using default fallback fonts for safety */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* --- Color Palette --- */
+/* Accent 1 (Royal): Deep Sapphire Blue (#154360) */
+/* Accent 2 (Gold/Ochre): Rich Saffron/Gold (#b8860b) */
+/* Accent 3 (Maroon): Deep Maroon/Red (#9a3324) */
+/* Text: Dark Brown/Black (#2c3e50) */
+
+body {
+    font-family: 'Playfair Display', serif; /* Slightly elegant body font */
+    line-height: 1.7;
+    background-color: #fceecf; /* Warm, Sandy/Ochre Background */
+    color: #2c3e50; /* Dark text */
+    padding: 30px;
+}
+
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+    background: #fdfcfc; /* Ivory/White paper background */
+    padding: 40px 60px;
+    border-radius: 12px;
+    /* Mughal-style border/shadow */
+    box-shadow: 
+        0 0 0 10px #b8860b, /* Gold Frame */
+        0 0 0 12px #154360, /* Blue Outer Frame */
+        0 10px 30px rgba(0, 0, 0, 0.2); /* Soft Lift */
+}
+
+/* --- FLORAL DECORATION STYLE --- */
+.decorative-header {
+    margin-bottom: 25px;
+    /* Repeating geometric floral pattern container */
+    content: "";
+    display: block;
+    border-top: 2px solid #b8860b;
+    border-bottom: 2px solid #b8860b;
+    padding: 5px 0;
+    background-color: #f7f9f9;
+}
+
+.decorative-header::before {
+    /* Repeating unicode character for a floral frieze effect */
+    content: "❀ ❁ ❀ ❁ ❀ ❁ ❀ ❁ ❀ ❁ ❀ ❁ ❀ ❁ ❀ ❁ ❀ ❁ ❀ ❁ ❀ ❁ ❀ ❁"; 
+    font-size: 0.9em;
+    color: #9a3324; /* Maroon color for the flowers */
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+/* --- END NEW STYLE --- */
+
+
+h1 {
+    font-family: 'Cinzel', serif; /* Regal header font */
+    color: #9a3324; /* Deep Maroon/Red */
+    text-align: center;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    position: relative;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+h1::after {
+    /* Decorative line inspired by Jali work */
+    content: "❖ ❖ ❖"; 
+    display: block;
+    margin-top: 10px;
+    font-size: 0.7em;
+    color: #b8860b; /* Gold/Saffron */
+}
+
+.intro {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: #34495e;
+    text-align: center;
+    border: 1px dashed #d5d8dc;
+    padding: 15px;
+    background-color: #f7f9f9;
+}
+
+h2 {
+    /* Section headers with a strong, deep color */
+    font-family: 'Cinzel', serif;
+    color: #154360; /* Deep Sapphire Blue */
+    margin-top: 45px;
+    padding-bottom: 10px;
+    /* The vertical colored bar is a richer gold */
+    border-left: 8px solid #b8860b; /* Thick Gold Bar */
+    padding-left: 20px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.phase-goal {
+    font-weight: 600;
+    color: #5d6d7e;
+    font-style: italic;
+    margin-bottom: 25px;
+    padding-left: 20px;
+}
+
+/* --- TOPIC CARD STYLING (NEW STRUCTURE) --- */
+
+.topic-container {
+    display: flex; /* Allows cards to sit side-by-side if they fit */
+    flex-wrap: wrap; /* Wraps cards if container is too small */
+    gap: 20px; /* Space between cards */
+    padding-left: 20px;
+}
+
+.topic-card {
+    flex: 1 1 350px; /* Flex-grow, flex-shrink, basis. Makes cards responsive. */
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-top: 4px solid #154360; /* Blue header strip for importance */
+}
+
+.topic-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.topic-title {
+    font-weight: bold;
+    color: #9a3324; /* Maroon */
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    display: block; /* Make it take up full width */
+}
+
+.topic-card a {
+    color: #008080; /* Teal for links (jewel tone) */
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.topic-card a:hover {
+    color: #b8860b; /* Gold highlight on hover */
+    text-decoration: underline;
+}
+
+.deadline {
+    font-style: italic;
+    color: #ff0d0d; /* Sapphire blue for importance */
+    font-size: 0.9em;
+    padding-top: 5px;
+    border-top: 1px dashed #d5d8dc;
+}
+
+/* --- END TOPIC CARD STYLING --- */
+
+
+hr {
+    border: 0;
+    height: 2px;
+    /* Decorative separator inspired by geometric patterns */
+    background-image: linear-gradient(to right, #fdfcfc, #b8860b, #fdfcfc);
+    margin: 40px 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px solid #eee;
+    color: #7f8c8d;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.9em;
+}
